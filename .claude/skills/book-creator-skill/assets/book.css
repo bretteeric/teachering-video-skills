@@ -1,0 +1,136 @@
+/* 教科書編排（疊加在 lesson.css 之上），由 build_book.py 使用 */
+
+/* 頁碼標記：只給程式找頁碼用，輸出前會被移除 */
+.pm { position: absolute !important; left: 0; top: 0; font-size: 3px; line-height: 1; color: #fff; white-space: nowrap; z-index: 0; }
+.pm.br { left: auto; top: auto; right: 0; bottom: 0; }
+.pm.tr { left: auto; right: 0; }
+h2, .opener, .part-page, .index-page, .book-toc li { position: relative; }
+
+/* ---------- 封面（滿版） ---------- */
+@page { size: A4; }
+.book-cover {
+  width: 210mm; height: 296.5mm; box-sizing: border-box; overflow: hidden; position: relative;
+  padding: 16mm 18mm 14mm; color: #fff; text-align: center;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(31,143,214,.45) 0, rgba(31,143,214,0) 55%),
+    linear-gradient(165deg, #06162b 0%, #0d2c55 50%, #1b2560 100%);
+}
+.book-cover::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(127,227,238,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127,227,238,.10) 1px, transparent 1px),
+    linear-gradient(rgba(127,227,238,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127,227,238,.05) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+}
+.book-cover::after {
+  content: ""; position: absolute; left: 10mm; right: 10mm; top: 10mm; bottom: 10mm;
+  border: 1px solid rgba(127,227,238,.35); border-radius: 4px;
+}
+.book-cover > * { position: relative; z-index: 1; }
+.bc-top { display: flex; justify-content: space-between; align-items: center; font-size: 9pt; letter-spacing: 3px; color: #7fe3ee; }
+.bc-badge { border: 1.5px solid #f5a623; color: #f5a623; padding: .5mm 3mm; border-radius: 3px; font-weight: 800; letter-spacing: 2px; }
+.bc-emblem { margin: 12mm auto 4mm; width: 104mm; height: 104mm; }
+.bc-emblem svg, .tp-emblem svg { width: 100%; height: 100%; }
+.bc-title {
+  font-family: "Noto Serif TC", "Noto Sans TC", serif; font-weight: 900; font-size: 40pt; line-height: 1.22;
+  margin: 2mm 0 4mm; color: #fff; border: 0; padding: 0; letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(127,227,238,.45);
+}
+.bc-hours { font-size: 13pt; color: #dbe6f3; letter-spacing: 2px; }
+.bc-hours span { font-size: 22pt; font-weight: 900; color: #f5a623; }
+.bc-sub { margin-top: 6mm; font-size: 11.5pt; font-weight: 700; color: #7fe3ee; }
+.bc-tag { margin-top: 2.5mm; font-size: 10pt; color: #b9c7da; }
+.bc-parts { margin-top: 10mm; display: flex; gap: 3mm; justify-content: center; }
+.bc-parts span {
+  flex: 1; border: 1px solid rgba(127,227,238,.5); border-radius: 4px; padding: 2mm 1mm;
+  font-size: 9pt; color: #e6f4fb; background: rgba(11,39,72,.55);
+}
+.bc-parts b { display: block; color: #7fe3ee; font-size: 8.5pt; margin-bottom: .5mm; }
+.bc-foot {
+  position: absolute; left: 18mm; right: 18mm; bottom: 15mm; display: flex; justify-content: space-between;
+  font-size: 9pt; color: #9fb3cc; border-top: 1px solid rgba(127,227,238,.3); padding-top: 3mm;
+}
+
+/* ---------- 書名頁、如何使用本書、目錄 ---------- */
+.title-page { height: 255mm; text-align: center; page-break-after: always; padding-top: 22mm; box-sizing: border-box; }
+.tp-emblem { width: 62mm; height: 62mm; margin: 0 auto 8mm; background: #0b1f3a; border-radius: 50%; padding: 3mm; }
+.title-page h1 { font-family: "Noto Serif TC", serif; font-size: 30pt; color: var(--navy); border: 0; margin: 0; }
+.tp-hours { display: inline-block; margin-top: 3mm; padding: .5mm 4mm; border: 2px solid var(--orange); color: var(--orange);
+  font-weight: 800; letter-spacing: 3px; border-radius: 3px; }
+.tp-sub { margin-top: 5mm; color: var(--blue); font-weight: 700; }
+.tp-meta { width: 140mm; margin: 22mm auto 0; text-align: left; }
+.tp-meta th { width: 26mm; }
+
+.fm-title { font-family: "Noto Serif TC", serif; font-size: 22pt; margin: 0 0 6mm; }
+.howto { page-break-after: always; }
+.howto-list li { margin: 1mm 0; }
+
+.book-toc ul { list-style: none; padding: 0; margin: 0; }
+.book-toc li { display: flex; align-items: baseline; margin: 0; line-height: 1.6; break-inside: avoid; }
+.book-toc .t { flex: 0 1 auto; }
+.book-toc .dots { flex: 1 1 auto; border-bottom: 1px dotted #9aa7b6; margin: 0 2mm; transform: translateY(-1mm); min-width: 6mm; }
+.book-toc .p { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--navy); }
+.book-toc .lv0 { margin-top: 4mm; font-size: 12.5pt; font-weight: 800; color: var(--navy); border-top: 2px solid var(--cyan); padding-top: 1.5mm; break-after: avoid; }
+.book-toc .lv1 { margin-top: 1.8mm; font-size: 11pt; font-weight: 700; color: var(--blue); break-after: avoid; }
+.book-toc .lv2 { padding-left: 8mm; font-size: 9.2pt; color: var(--ink); }
+
+/* ---------- 篇扉頁 ---------- */
+.part-page {
+  height: 258mm; box-sizing: border-box; page-break-before: always; page-break-after: always;
+  padding: 40mm 16mm 0; border-radius: 6px; overflow: hidden; color: #fff;
+  background: linear-gradient(160deg, #0b1f3a 0%, #15396b 60%, #2b2f73 100%);
+}
+.part-page::before {
+  content: ""; position: absolute; inset: 0; border-radius: 6px;
+  background-image: linear-gradient(rgba(14,165,183,.16) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(14,165,183,.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.part-page > * { position: relative; }
+.pp-no { font-size: 11pt; letter-spacing: 6px; color: #7fe3ee; }
+.pp-name { font-size: 16pt; margin-top: 4mm; color: #f5a623; font-weight: 800; letter-spacing: 4px; }
+.pp-title { font-family: "Noto Serif TC", serif; font-size: 34pt; color: #fff; border: 0; margin: 2mm 0 2mm; padding: 0; }
+.pp-span { color: #b9c7da; font-size: 11pt; }
+.pp-desc { margin-top: 12mm; font-size: 11.5pt; line-height: 1.9; color: #e6eef8; max-width: 150mm; }
+.pp-list { list-style: none; padding: 0; margin-top: 14mm; }
+.pp-list li { display: grid; grid-template-columns: 22mm 1fr; column-gap: 3mm; padding: 3mm 0; border-top: 1px solid rgba(127,227,238,.3); }
+.pp-list b { color: #7fe3ee; grid-row: span 2; }
+.pp-list span { font-size: 12.5pt; font-weight: 700; }
+.pp-list em { font-style: normal; font-size: 9.5pt; color: #b9c7da; }
+
+/* ---------- 章扉頁 ---------- */
+.opener { height: 258mm; box-sizing: border-box; page-break-before: always; page-break-after: always; text-align: center; }
+.op-kicker {
+  display: flex; justify-content: space-between; align-items: center; text-align: left;
+  font-size: 10pt; letter-spacing: 4px; color: var(--cyan); font-weight: 800;
+  border-bottom: 3px solid var(--navy); padding-bottom: 1.5mm;
+}
+.op-kicker span { letter-spacing: 1px; color: var(--muted); font-weight: 500; font-size: 9.5pt; }
+.op-title { font-family: "Noto Serif TC", serif; font-size: 25pt; border: 0; margin: 5mm 0 1mm; padding: 0; color: var(--navy); line-height: 1.3; }
+.op-title small { display: block; font-family: "Noto Sans TC", sans-serif; font-size: 12pt; color: var(--orange); letter-spacing: 3px; margin-bottom: 1mm; }
+.op-sub { font-size: 11pt; color: var(--muted); margin-bottom: 4mm; }
+img.op-poster { height: 172mm; max-height: 172mm; width: auto; margin: 0 auto; border-radius: 6px; border: 0;
+  box-shadow: 0 3px 14px rgba(15,42,74,.28); }
+.op-meta { width: auto; margin: 5mm auto 0; font-size: 9.5pt; }
+.op-meta th, .op-meta td { border: 0; border-bottom: 1px solid var(--line); background: transparent !important; padding: 1mm 3mm; }
+.op-meta th { color: var(--blue); }
+
+/* 章內第一個 H2 已由扉頁換頁 */
+.chapter { position: relative; }
+
+/* ---------- 索引 ---------- */
+.index-page { page-break-before: always; }
+.ix-title { font-family: "Noto Serif TC", serif; font-size: 22pt; margin: 0 0 3mm; }
+.ix-note { color: var(--muted); font-size: 9pt; margin-bottom: 5mm; }
+.ix-cols { column-count: 2; column-gap: 9mm; column-rule: 1px solid var(--line); }
+.ix-group { break-inside: avoid-column; margin-bottom: 3mm; }
+.ix-head { font-weight: 800; color: #fff; background: var(--navy); padding: .4mm 3mm; border-radius: 2px; font-size: 10pt; margin-bottom: 1mm; }
+.ix-group ul { list-style: none; padding: 0; margin: 0; }
+.ix-group li { display: flex; justify-content: space-between; gap: 3mm; font-size: 9.3pt; line-height: 1.55;
+  border-bottom: 1px dotted #d6dde6; padding: .4mm 0; break-inside: avoid; }
+.ix-term { font-weight: 700; color: var(--navy); }
+.ix-pages { text-align: right; font-variant-numeric: tabular-nums; }
+.ix-pages a { color: var(--blue); text-decoration: none; }
+.op-noposter { height: 150mm; margin: 0 auto; width: 110mm; border: 1px dashed var(--line); border-radius: 6px; background: var(--soft); }

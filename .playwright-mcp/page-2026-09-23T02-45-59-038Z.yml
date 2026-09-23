@@ -1,0 +1,76 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "開啟功能選單" [ref=e3] [cursor=pointer]: ☰
+    - link "RagDemo" [ref=e4] [cursor=pointer]:
+      - /url: /
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "長照與健康資源智慧問答平台" [level=1] [ref=e9]
+        - paragraph [ref=e10]: 第 15 單元｜整合驗收與部署
+      - paragraph [ref=e12]:
+        - text: 本站是
+        - strong [ref=e13]: SQL Server 2025 RAG × ASP.NET Core MVC
+        - text: 課程的示範專案。 版面採 RWD（響應式網頁設計）：手機是單欄、選單收成抽屜，平板以上逐步展開， 桌機才會出現常駐的左側導覽。把瀏覽器視窗拉寬拉窄，可以直接看到斷點如何切換。
+      - heading "本單元可以操作的頁面" [level=2] [ref=e14]
+      - generic [ref=e15]:
+        - link "環境檢查 確認網站、資料庫與模型三方連線都通。" [ref=e16] [cursor=pointer]:
+          - /url: /Health
+          - generic [ref=e17]: 環境檢查
+          - generic [ref=e18]: 確認網站、資料庫與模型三方連線都通。
+        - link "授權驗證 用真實請求驗證匿名、一般使用者與 Admin 的分界。" [ref=e19] [cursor=pointer]:
+          - /url: /Access
+          - generic [ref=e20]: 授權驗證
+          - generic [ref=e21]: 用真實請求驗證匿名、一般使用者與 Admin 的分界。
+        - link "知識庫白名單 三個知識庫走同一組程式碼，靠白名單決定連到哪一個。" [ref=e22] [cursor=pointer]:
+          - /url: /KnowledgeBases
+          - generic [ref=e23]: 知識庫白名單
+          - generic [ref=e24]: 三個知識庫走同一組程式碼，靠白名單決定連到哪一個。
+        - link "檢索測試 向量檢索與關鍵字檢索各跑一次，再用 RRF 融合。" [ref=e25] [cursor=pointer]:
+          - /url: /Search
+          - generic [ref=e26]: 檢索測試
+          - generic [ref=e27]: 向量檢索與關鍵字檢索各跑一次，再用 RRF 融合。
+        - link "期末驗收 大綱 §9 的八項驗收案例，每次開頁重跑一次。" [ref=e28] [cursor=pointer]:
+          - /url: /Acceptance
+          - generic [ref=e29]: 期末驗收
+          - generic [ref=e30]: 大綱 §9 的八項驗收案例，每次開頁重跑一次。
+        - link "品質與安全 當場計算路由正確率，並列出安全測試清單。" [ref=e31] [cursor=pointer]:
+          - /url: /Quality
+          - generic [ref=e32]: 品質與安全
+          - generic [ref=e33]: 當場計算路由正確率，並列出安全測試清單。
+        - link "ANN 實驗 親手量出 ANN 在延遲、Recall 與新資料可見性之間的取捨。" [ref=e34] [cursor=pointer]:
+          - /url: /Ann
+          - generic [ref=e35]: ANN 實驗
+          - generic [ref=e36]: 親手量出 ANN 在延遲、Recall 與新資料可見性之間的取捨。
+        - link "語意解析 自然語言經 Gemma 解析成通過驗證的查詢 DTO。" [ref=e37] [cursor=pointer]:
+          - /url: /Parse
+          - generic [ref=e38]: 語意解析
+          - generic [ref=e39]: 自然語言經 Gemma 解析成通過驗證的查詢 DTO。
+        - link "智慧路由 判斷一題該查單一知識庫、跨庫，還是先問清楚。" [ref=e40] [cursor=pointer]:
+          - /url: /Route
+          - generic [ref=e41]: 智慧路由
+          - generic [ref=e42]: 判斷一題該查單一知識庫、跨庫，還是先問清楚。
+        - link "智慧問答 ChatGPT 風格的串流問答，附可追溯的引用卡片。" [ref=e43] [cursor=pointer]:
+          - /url: /Chat
+          - generic [ref=e44]: 智慧問答
+          - generic [ref=e45]: ChatGPT 風格的串流問答，附可追溯的引用卡片。
+        - link "問答整合 解析、路由、檢索、去重、生成、標註引用的完整串接。" [ref=e46] [cursor=pointer]:
+          - /url: /Ask
+          - generic [ref=e47]: 問答整合
+          - generic [ref=e48]: 解析、路由、檢索、去重、生成、標註引用的完整串接。
+        - link "文件管理 後臺文件清單，只有 Admin 角色看得到。" [ref=e49] [cursor=pointer]:
+          - /url: /Admin/Documents
+          - generic [ref=e50]: 文件管理
+          - generic [ref=e51]: 後臺文件清單，只有 Admin 角色看得到。
+        - link "上傳文件 上傳可擷取文字的 PDF，取得處理用的工作編號。" [ref=e52] [cursor=pointer]:
+          - /url: /Admin/Upload
+          - generic [ref=e53]: 上傳文件
+          - generic [ref=e54]: 上傳可擷取文字的 PDF，取得處理用的工作編號。
+        - link "處理狀態 追蹤擷取、切割、向量化各階段的處理進度。" [ref=e55] [cursor=pointer]:
+          - /url: /Admin/Jobs
+          - generic [ref=e56]: 處理狀態
+          - generic [ref=e57]: 追蹤擷取、切割、向量化各階段的處理進度。
+  - contentinfo [ref=e58]:
+    - text: © 2026 - RagDemo -
+    - link "Privacy" [ref=e59] [cursor=pointer]:
+      - /url: /Home/Privacy

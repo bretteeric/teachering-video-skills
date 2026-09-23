@@ -1,0 +1,104 @@
+{
+  "_comment": "AI Agent 架構師訓練手冊-30HRS 的實際設定。新書請複製本檔再修改；欄位說明見 references/config-schema.md。",
+
+  "source_dir": "講義",
+  "source_glob": "[0-9][0-9]_*.md",
+  "poster_dir": "海報",
+  "poster_glob": "[0-9][0-9] *.png",
+  "output_dir": "講義",
+  "output_name": "AI Agent 架構師訓練手冊-30HRS",
+  "node_modules": "工具/node_modules",
+
+  "title": "AI Agent 架構師訓練手冊",
+  "title_cover_html": "AI Agent<br>架構師訓練手冊",
+  "badge": "30HRS",
+  "subtitle": "Python Flask × OpenSpec SDLC × Agent Skill × React 網路書店電商實戰",
+  "tagline": "從需求、規格、分層架構到上線驗收，與 AI Agent 協作打造可維護的全端系統",
+  "edition": "第 1 版　2026 年 9 月",
+  "cover_kicker": "AI AGENT ARCHITECT · TRAINING HANDBOOK",
+  "cover_stats": "<span>30</span> 小時 · 15 章 · 4 篇",
+  "cover_footer_left": "AI Agent 架構工程師實戰課程　指定教材",
+  "author": "AI Agent 架構工程師實戰課程",
+  "keywords": "AI Agent, Flask, OpenSpec, Agent Skill, React, MVVM, CLAUDE.md",
+
+  "emblem": {
+    "core_top": "AI",
+    "core_bottom": "AGENT",
+    "nodes": ["SPEC", "SKILL", "RULES", "FLASK", "REACT", "TEST"],
+    "accent_nodes": ["SPEC", "RULES"]
+  },
+
+  "title_page_rows": [
+    ["對應課程", "AI Agent 架構工程師實戰課程（30 小時，15 場 × 2 小時）"],
+    ["導引案例", "BookStore 網路書店電商前後台系統"],
+    ["全書結構", "前言 + 四篇 十五章 + 索引"],
+    ["範例專案", "`範例/01～15`（每章對應一個範例資料夾）"],
+    ["版次", "第 1 版　2026 年 9 月"]
+  ],
+
+  "howto": {
+    "intro": "本書由 15 場課程講義依授課時序編排而成：**一場課就是一章**，章號與 Session 編號相同，圖號（如「圖 3-6」）也沿用章號。",
+    "structure_intro": "每一章都依相同結構撰寫，講師可照章授課，學員可作為課後複習手冊：",
+    "structure": [
+      ["課程資訊與學習目標", "本章在課程中的位置"],
+      ["教學準備", "講師清單、學員環境檢查、範例啟動方式"],
+      ["教學流程與時間分配", "分段表格與時間軸"],
+      ["概念講解與講師示範", "概念圖、程式碼、操作截圖、AI 協作示範"],
+      ["學員實作任務", "任務、完成標準、檢查點、進階挑戰"],
+      ["測試、Review 與問題排除", "驗收指令、檢查表、常見問題"],
+      ["評量與成果提交", "評分規準、提交清單、課後作業、下一章預告"],
+      ["附錄", "檔案清單、完整程式碼、延伸閱讀"]
+    ],
+    "admonitions": [
+      ["tip", "講師提示", "授課節奏、示範重點、容易被問到的問題。"],
+      ["warning", "常見錯誤", "學員實作時最常犯的錯誤與修正方式。"],
+      ["info", "AI Agent 協作提示", "如何下提示詞、如何檢查 Agent 的輸出。"]
+    ]
+  },
+
+  "preface": {
+    "chapter_num": 0,
+    "title": "課程總覽與學習地圖",
+    "kicker": "PREFACE"
+  },
+
+  "opener_meta": [["課程時數", "duration"], ["範例專案", "example", "code"]],
+
+  "parts": [
+    {"name": "第一篇", "title": "架構思維與 AI 協作", "span": "S01～S05", "chapters": [1, 5],
+     "desc": "先學會「約束 AI」：界定系統邊界、建立領域模型，並以 CLAUDE.md、OpenSpec 與 Agent Skill 三項工具，把 AI Agent 的工作範圍、輸出品質與工程決策放進可檢查的規範裡。"},
+    {"name": "第二篇", "title": "Flask 分層後端", "span": "S06～S09", "chapters": [6, 9],
+     "desc": "從 App Factory 骨架開始，依序建立 Repository、Service 與 Controller 三層，讓資料存取、商業規則與對外介面各守邊界，並以統一回應格式提供 REST API。"},
+    {"name": "第三篇", "title": "React 前端與後台", "span": "S10～S13", "chapters": [10, 13],
+     "desc": "以 MVVM 分離畫面與狀態，透過 axios service 串接後端，完成 RWD 商品目錄、購物車結帳，以及具 RBAC 權限控管與稽核紀錄的後台管理模組。"},
+    {"name": "第四篇", "title": "品質與交付", "span": "S14～S15", "chapters": [14, 15],
+     "desc": "以 pytest、前端測試、Lint 與架構審查建立品質關卡，最後依 OpenSpec 規格逐項驗收，完成部署檢查與成果展示。"}
+  ],
+
+  "index_terms": [
+    ["AI Agent", "AI Agent"], ["Agent Skill", "Agent Skill|SKILL\\.md"], ["App Factory", "App Factory|create_app"],
+    ["axios", "axios"], ["Blueprint", "Blueprint"], ["Bootstrap 5.3", "Bootstrap"], ["Bounded Context", "Bounded Context"],
+    ["CLAUDE.md", "CLAUDE\\.md"], ["Code Review", "Code Review"], ["Context Map", "[Cc]ontext [Mm]ap"],
+    ["Controller", "Controller"], ["CRUD", "CRUD"], ["Design（設計文件）", "design\\.md"], ["DTO", "DTO"], ["ERD", "ERD"],
+    ["Flask", "Flask"], ["Git", "\\bGit\\b|\\bgit\\b"], ["JWT", "JWT"], ["Lint", "Lint|lint\\b"],
+    ["Mermaid", "[Mm]ermaid"], ["Model", "\\bModel\\b"], ["MVC", "\\bMVC\\b"], ["MVP", "\\bMVP\\b"],
+    ["MVVM", "MVVM"], ["OpenSpec", "OpenSpec"], ["Proposal（提案）", "[Pp]roposal"], ["pytest", "pytest"],
+    ["RBAC", "RBAC"], ["React", "React"], ["Repository", "Repository"], ["REST API", "REST"],
+    ["Ruff", "[Rr]uff"], ["RWD", "RWD"], ["Schema", "[Ss]chema"], ["SDLC", "SDLC"], ["Service", "\\bService\\b"],
+    ["Spec（規格）", "\\bspec\\.md|\\bSpec\\b"], ["SQLAlchemy", "SQLAlchemy"], ["SQLite", "SQLite"],
+    ["SweetAlert2", "SweetAlert2"], ["Tasks（任務清單）", "tasks\\.md|\\bTasks\\b"], ["User Story", "User Story"],
+    ["View", "\\bView\\b"], ["ViewModel", "ViewModel|use[A-Z]\\w+ViewModel"], ["Vite", "\\bVite\\b"],
+    ["Vitest", "Vitest"], ["VS Code", "VS Code"],
+    ["人在迴路（Human-in-the-loop）", "人在迴路|Human[- ]in[- ]the[- ]loop|HITL"], ["人工檢查點", "檢查點"],
+    ["工作區憲法", "工作區憲法"], ["分層架構", "分層"], ["分頁", "分頁"], ["交易", "交易"],
+    ["例外設計", "例外"], ["依賴方向", "依賴方向"], ["庫存", "庫存"], ["訂單狀態機", "狀態機|訂單狀態"],
+    ["統一回應格式", "統一回應"], ["設定管理", "設定管理|config\\.py"], ["環境變數", "環境變數|\\.env\\b"],
+    ["領域模型", "領域模型"], ["驗收條件", "驗收條件"], ["驗收指令", "驗收指令"], ["需求拆解", "需求拆解"],
+    ["提示詞", "提示詞"], ["購物車", "購物車"], ["結帳", "結帳"], ["表單驗證", "表單驗證|驗證規則"],
+    ["攔截器", "攔截器|interceptor"], ["響應式版型", "響應式|RWD"], ["離線資源", "離線"],
+    ["權限管理", "權限"], ["稽核紀錄", "稽核"], ["儀表板", "儀表板"], ["架構審查", "架構審查|check_layers"],
+    ["品質關卡", "品質關卡"], ["端到端驗收", "端到端|E2E"], ["部署檢查", "部署"],
+    ["敏感資訊", "敏感資訊|密碼雜湊|secret"], ["規格驅動開發", "規格驅動"], ["增量交付", "增量"],
+    ["元件拆分", "元件"], ["狀態管理", "狀態管理"], ["測試", "測試"]
+  ]
+}

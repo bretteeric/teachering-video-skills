@@ -1,0 +1,10 @@
+[  131662ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://chatgpt.com/backend-api/conversation/6ab36fea-33dc-83ee-8559-9f955ac8d1e5/textdocs:0
+[  131666ms] [ERROR] RequestError: Conversation not found
+    at gwe (https://chatgpt.com/cdn/assets/4813494d-i6uoff53a7o08h8b.js:424:37364)
+    at async vpr (https://chatgpt.com/cdn/assets/conversation-small-c1t85fv7s1nl9k7s.js:88:285031)
+    at async ypr (https://chatgpt.com/cdn/assets/conversation-small-c1t85fv7s1nl9k7s.js:88:285237) undefined @ https://chatgpt.com/cdn/assets/2340486e-b3t78qt0psmq9d8c.js:27
+[  789074ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://chatgpt.com/backend-api/conversation/6ab37278-e038-83e9-8532-8a2a31999e7c/textdocs:0
+[  789077ms] [ERROR] RequestError: Conversation not found
+    at gwe (https://chatgpt.com/cdn/assets/4813494d-i6uoff53a7o08h8b.js:424:37364)
+    at async vpr (https://chatgpt.com/cdn/assets/conversation-small-c1t85fv7s1nl9k7s.js:88:285031)
+    at async ypr (https://chatgpt.com/cdn/assets/conversation-small-c1t85fv7s1nl9k7s.js:88:285237) undefined @ https://chatgpt.com/cdn/assets/2340486e-b3t78qt0psmq9d8c.js:27

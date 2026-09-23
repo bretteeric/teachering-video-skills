@@ -1,0 +1,101 @@
+- generic [ref=e1]:
+  - link "跳至內容" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - navigation "側邊欄":
+        - generic:
+          - generic:
+            - generic:
+              - button "開啟側邊欄":
+                - generic:
+                  - img
+                  - img
+        - generic:
+          - generic:
+            - link "新對話":
+              - /url: /
+              - generic:
+                - generic:
+                  - img
+              - generic: 新對話
+          - generic:
+            - button "搜尋":
+              - generic:
+                - generic:
+                  - img
+              - generic: 搜尋
+          - generic:
+            - button "最近的對話":
+              - generic:
+                - generic:
+                  - img
+              - generic: 最近的對話
+        - generic:
+          - generic:
+            - button "開啟設定檔功能表"
+      - generic [ref=e9]:
+        - heading "聊天歷程紀錄" [level=2] [ref=e10]
+        - generic [ref=e11]:
+          - navigation "聊天歷程紀錄" [ref=e12]:
+            - generic [ref=e15]:
+              - link "首頁" [ref=e16] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e17]: ChatGPT
+              - generic [ref=e18]:
+                - button "搜尋" [ref=e19] [cursor=pointer]:
+                  - img [ref=e20]
+                - button "關閉側邊欄" [expanded] [ref=e22]:
+                  - img [ref=e23]
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - link "新對話" [ref=e28] [cursor=pointer]:
+                  - /url: /
+                  - img [ref=e31]
+                  - generic [ref=e34]: 新對話
+              - listitem
+            - link "檔案庫" [ref=e35] [cursor=pointer]:
+              - /url: /library?entry_point=sidebar
+              - img [ref=e38]
+              - generic [ref=e41]: 檔案庫
+            - link "排程" [ref=e42] [cursor=pointer]:
+              - /url: /scheduled
+              - img [ref=e45]
+              - generic [ref=e48]: 排程
+            - link "外掛程式" [ref=e49] [cursor=pointer]:
+              - /url: /plugins
+              - img [ref=e52]
+              - generic [ref=e55]: 外掛程式
+            - generic [ref=e57] [cursor=pointer]:
+              - img [ref=e60]
+              - generic [ref=e63]: 更多
+          - button "chen eric Plus，開啟設定檔功能表" [ref=e67] [cursor=pointer]:
+            - generic [ref=e71]:
+              - generic [ref=e73]: chen eric
+              - generic [ref=e76]: Plus
+            - button "下載應用程式" [ref=e79]:
+              - img [ref=e81]
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - banner:
+          - button "暫存對話" [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]:
+              - img [ref=e95]
+              - img [ref=e97]
+      - main [ref=e100]:
+        - generic [ref=e102]:
+          - heading "隨時準備好就可以開始了。" [level=1] [ref=e110]:
+            - generic [ref=e111]: 隨時準備好就可以開始了。
+          - generic [ref=e121]:
+            - generic [ref=e125]:
+              - button "新增檔案和更多內容" [ref=e128] [cursor=pointer]:
+                - img
+              - textbox "與 ChatGPT 對話" [active] [ref=e131]:
+                - /placeholder: 詢問 ChatGPT
+              - button "傳送提示詞" [disabled] [ref=e134] [cursor=pointer]:
+                - img [ref=e135]
+            - button [disabled] [ref=e137]
+            - button [disabled] [ref=e138]
+            - button [disabled] [ref=e139]
+  - alert [ref=e140]
+  - status [ref=e141]

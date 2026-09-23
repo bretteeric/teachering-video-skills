@@ -1,0 +1,22 @@
+[  156291ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5199/api/admin/documents:0
+[  156698ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  188686ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  196791ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5199/api/admin/documents:0
+[  196811ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  228986ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  229171ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FUpload:0
+[  229360ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FJobs:0
+[  230590ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5199/api/admin/documents:0
+[  230596ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  262873ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  263058ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FUpload:0
+[  263248ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FJobs:0
+[  264518ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5199/api/admin/documents:0
+[  264524ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  296688ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  296877ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FUpload:0
+[  297065ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5199/Identity/Account/Login?ReturnUrl=%2FAdmin%2FJobs:0
+[  357125ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5207/api/admin/documents:0
+[  357604ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5207/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0
+[  388613ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5207/api/admin/documents:0
+[  388629ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5207/Identity/Account/Login?ReturnUrl=%2FAdmin%2FDocuments:0

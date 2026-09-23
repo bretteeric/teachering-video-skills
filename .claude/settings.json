@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/pdf-image-hook.js\" session-start",
+            "shell": "bash",
+            "timeout": 15,
+            "statusMessage": "pdf-image-hook：註冊 講義/ 監看"
+          }
+        ]
+      }
+    ],
+    "FileChanged": [
+      {
+        "matcher": "講義|pdf$|PDF$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/pdf-image-hook.js\" file-changed",
+            "shell": "bash",
+            "timeout": 15,
+            "asyncRewake": true,
+            "rewakeMessage": "pdf-image-hook：講義/ 新增了 PDF，請依下列指示呼叫 image-geneate-skill。",
+            "rewakeSummary": "pdf-image-hook：講義新增 PDF",
+            "statusMessage": "pdf-image-hook"
+          }
+        ]
+      }
+    ]
+  }
+}

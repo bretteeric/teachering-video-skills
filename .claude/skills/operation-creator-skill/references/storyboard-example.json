@@ -1,0 +1,72 @@
+{
+  "title": "02_MVC分層與管理者授權（冒煙測試）",
+  "voice": { "name": "zh-TW-YunJheNeural", "rate": "-10%", "pitch": "-4Hz", "volume": "+0%" },
+  "scenes": [
+    {
+      "id": "s01", "type": "title",
+      "heading": "MVC 分層與管理者授權",
+      "subheading": "授權驗證頁操作示範",
+      "narration": [
+        "哈囉，這一支我們來實際操作授權驗證這一頁。",
+        "重點只有一個：同樣是沒權限，網頁跟 API 的反應為什麼不一樣。"
+      ]
+    },
+    {
+      "id": "s02", "type": "diagram",
+      "heading": "未登入時的兩種失敗",
+      "mermaid": "sequenceDiagram\n  participant B as 瀏覽器\n  participant A as 管理 API\n  participant P as 管理頁面\n  B->>A: GET /api/admin/documents\n  A-->>B: 401 未授權\n  B->>P: GET /Admin/Documents\n  P-->>B: 302 導向登入頁",
+      "narration": [
+        "先看這張圖，瀏覽器在沒登入的狀態下，分別去找 API 跟管理頁面。",
+        "API 直接回 401，頁面則是回 302，把你帶去登入。"
+      ]
+    },
+    {
+      "id": "s03", "type": "screen", "feature": "f03",
+      "steps": [
+        { "action": "goto", "url": "http://localhost:5310/Access", "shot": false },
+        { "action": "wait", "selector": "table tbody tr:nth-child(3)", "shot": false },
+        { "action": "focus", "selector": "table tbody tr:nth-child(1)" }
+      ],
+      "narration": [
+        "打開授權驗證頁，表格是瀏覽器真的發請求拿回來的。",
+        "第一列是公開的 ping，誰都能打，所以回 200。"
+      ]
+    },
+    {
+      "id": "s04", "type": "screen", "feature": "f03",
+      "steps": [
+        { "action": "focus", "selector": "table tbody tr:nth-child(2)" }
+      ],
+      "narration": [
+        "第二列是沒登入去打管理 API，你看，它回的是 401。"
+      ]
+    },
+    {
+      "id": "s05", "type": "screen", "feature": "f03",
+      "steps": [
+        { "action": "focus", "selector": "table tbody tr:nth-child(3)" }
+      ],
+      "narration": [
+        "第三列是管理頁面，這次回的是 302，把你導去登入頁。"
+      ]
+    },
+    {
+      "id": "s06", "type": "slide",
+      "heading": "重點",
+      "bullets": ["API 沒權限回 401", "頁面沒權限導向登入", "前端才能正確處理錯誤"],
+      "narration": [
+        "為什麼要分開？因為程式拿到一整頁登入畫面的 HTML，是解析不了的。",
+        "好，這一段就到這邊。"
+      ]
+    }
+  ],
+  "exclusions": [
+    { "feature": "f01", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f02", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f04", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f05", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f06", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f07", "reason": "冒煙測試只涵蓋授權驗證頁" },
+    { "feature": "f08", "reason": "冒煙測試只涵蓋授權驗證頁" }
+  ]
+}
