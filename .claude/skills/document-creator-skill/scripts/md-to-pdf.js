@@ -69,7 +69,9 @@ if (fmMatch) {
   }
 }
 let md = fmMatch ? raw.slice(fmMatch[0].length) : raw;
-if (fmMatch && fm.title && !/^#\s+/m.test(md)) {
+// 找 H1 時要跳過 ``` 程式碼區塊：Python／bash 的 `# 註解` 也是 `#` 開頭，會被誤認成 H1。
+const withoutFences = (s) => s.replace(/^```[\s\S]*?^```/gm, '');
+if (fmMatch && fm.title && !/^#\s+/m.test(withoutFences(md))) {
   const head = [`# Section ${fm.session || ''}｜${fm.title}`.replace('Section ｜', '')];
   if (fm.subtitle) head.push('', `> ${fm.subtitle}`);
   head.push('');
@@ -80,7 +82,7 @@ if (fmMatch && fm.title && !/^#\s+/m.test(md)) {
   md = head.join('\n') + '\n\n' + md;
 }
 
-const title = (md.match(/^#\s+(.+)$/m) || [, stem])[1].trim();
+const title = (withoutFences(md).match(/^#\s+(.+)$/m) || [, stem])[1].trim();
 const fileUrl = (p) => 'file:///' + path.resolve(p).replace(/\\/g, '/');
 
 const html = `<!DOCTYPE html>
